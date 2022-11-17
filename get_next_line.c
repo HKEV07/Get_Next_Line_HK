@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenaait <ibenaait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: HK       <HK@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 12:21:57 by ibenaait          #+#    #+#             */
-/*   Updated: 2022/11/16 16:02:14 by ibenaait         ###   ########.fr       */
+/*   Created: 2022/11/15 12:21:57 by HK                 #+#    #+#            */
+/*   Updated: 2022/11/16 16:02:14 by HK                ###   ########.fr      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,13 @@ char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*remaining;
-	int			flag;
 
-	flag = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	remaining = read_from_file(fd, remaining);
 	if (!remaining)
 		return (0);
 	line = ft_get_line(remaining);
-	remaining = ft_save_remaining(remaining, &flag);
-	if (!remaining && flag)
-		return (0);
+	remaining = ft_save_remaining(remaining);
 	return (line);
 }
