@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenaait <ibenaait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: HK       <HK@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 12:22:17 by ibenaait          #+#    #+#             */
-/*   Updated: 2022/11/16 16:14:45 by ibenaait         ###   ########.fr       */
+/*   Created: 2022/11/15 12:21:57 by HK                 #+#    #+#            */
+/*   Updated: 2022/11/16 16:02:14 by HK                ###   ########.fr      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*ft_get_line(char *remaining)
 	return (line);
 }
 
-char	*ft_save_remaining(char *remaining, int *flag)
+char	*ft_save_remaining(char *remaining)
 {
 	int		i;
 	int		j;
@@ -106,7 +106,6 @@ char	*ft_save_remaining(char *remaining, int *flag)
 	str = malloc(ft_strlen(remaining) + 1 - i);
 	if (!str)
 	{
-		*flag = 1;
 		free(remaining);
 		return (0);
 	}
