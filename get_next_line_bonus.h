@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibenaait <ibenaait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: HK       <HK@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 12:22:38 by ibenaait          #+#    #+#             */
-/*   Updated: 2022/11/15 22:02:59 by ibenaait         ###   ########.fr       */
+/*   Created: 2022/11/15 12:21:57 by HK                 #+#    #+#            */
+/*   Updated: 2022/11/16 16:02:14 by HK                ###   ########.fr      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*read_from_file(int fd, char *remaining);
 char	*ft_strjoin(char *remaining, char *buff);
 size_t	ft_strlen(char *s);
 char	*ft_get_line(char *remaining);
-char	*ft_save_remaining(char *remaining, int *flag);
+char	*ft_save_remaining(char *remaining);
 int		find_new_line(char *str);
 
 #endif
